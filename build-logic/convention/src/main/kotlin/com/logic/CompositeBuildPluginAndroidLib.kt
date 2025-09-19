@@ -44,9 +44,9 @@ class CompositeBuildPluginAndroidLib : Plugin<Project> {
                     jvmToolchain(23)
             }
 
-            // target.extensions.getByType(org.gradle.api.plugins.JavaPluginExtension::class.java).apply {
-            //     toolchain.languageVersion.set(org.gradle.jvm.toolchain.JavaLanguageVersion.of(25))
-            // }
+            target.extensions.getByType(org.gradle.api.plugins.JavaPluginExtension::class.java).apply {
+                toolchain.languageVersion.set(org.gradle.jvm.toolchain.JavaLanguageVersion.of(23))
+            }
 
             dependencies {
 
