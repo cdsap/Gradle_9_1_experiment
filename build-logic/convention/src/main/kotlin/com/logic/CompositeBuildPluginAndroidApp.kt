@@ -56,7 +56,7 @@ class CompositeBuildPluginAndroidApp : Plugin<Project> {
                  .configureEach {
                      javaCompiler.set(
                          toolchains.compilerFor {
-                             languageVersion.set(JavaLanguageVersion.of(25))
+                             languageVersion.set(JavaLanguageVersion.of(23))
                          }
                      )
                  }
