@@ -1,0 +1,44 @@
+package com.awesomeapp.newsidentity.di
+
+import dagger.Module
+import dagger.Provides
+import dagger.hilt.InstallIn
+import dagger.hilt.components.SingletonComponent
+import javax.inject.Singleton
+import com.awesomeapp.newsidentity.Viewmodel188_1
+import com.awesomeapp.newsidentity.Activity188_2
+import com.awesomeapp.newsidentity.Activity188_3
+import com.awesomeapp.newsidentity.Fragment188_4
+import com.awesomeapp.newsidentity.Repository188_5
+import com.awesomeapp.checkoutidentity.Api152_6
+import com.awesomeapp.logidentity.Api172_6
+import com.awesomeapp.locationidentity.Api160_6
+import com.awesomeapp.feedidentity.Api156_6
+import com.awesomeapp.groupidentity.Api164_6
+import com.awesomeapp.newsidentity.Api188_6
+
+@Module
+@InstallIn(SingletonComponent::class)
+object Module_188 {
+    @Provides
+    @Singleton
+    fun provideRepository188_5(
+        api0: Api152_6 = Api152_6(),
+        api1: Api172_6 = Api172_6(),
+        api2: Api160_6 = Api160_6(),
+        api3: Api156_6 = Api156_6(),
+        api4: Api164_6 = Api164_6()
+    ): Repository188_5 {
+        return Repository188_5(api0, 
+        api1, 
+        api2, 
+        api3, 
+        api4)
+    }
+
+    @Provides
+    @Singleton
+    fun provideApi188_6(): Api188_6 {
+        return Api188_6()
+    }
+}
